@@ -1,3 +1,2 @@
 #!/bin/bash
 ls -pa | sort -k 1.1,1.1 | paste -sd, -
-
