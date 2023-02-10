@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -pa | sort -k1.1,1.1 | grep -v / | xargs echo | sed "s/ /, /g"
+ls -pa | sort -k1.1,1.1 | xargs echo | sed "s/ /, /g"
