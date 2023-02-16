@@ -1,2 +1,7 @@
 #!/bin/bash
-for i in {a..z}{a..z}; do if (($(expr $i != 'oo')));then echo $i; fi done
+for i in {a..z}{a..z}
+do
+  if (($(expr $i != 'oo')))
+    then echo $i
+  fi
+done
