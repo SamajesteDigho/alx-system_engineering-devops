@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Print script with pid
+pgrep -l bash
