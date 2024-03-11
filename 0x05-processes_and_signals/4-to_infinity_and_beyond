@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Printing to infinity and beyond
-echo $$
 while true
 do
     echo "To infinity and beyond"
