@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Killing a process
-fpd=`pgrep -f "4-to_infinity_and_beyond"`
+fpd=`pgrep -f bash`
+echo "$fpd"
 if [ -n "$fpd" ]; then
     echo "Process is $fpd"
 fi
