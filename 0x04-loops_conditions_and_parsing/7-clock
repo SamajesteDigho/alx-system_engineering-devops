@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# The clock in bash
+min=0;
+hr=-1;
+while [ $min -le 720 ];
+do
+    let "dis=$min%60";
+    if [ $dis -eq 0 ];
+    then
+        let "hr+=1";
+        echo "Hour: $hr";
+    else
+        echo "$dis";
+    fi
+    let "min+=1";
+done
+return 0;

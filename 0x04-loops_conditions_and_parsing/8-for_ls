@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash Script for the ls
+for elt in `ls`;
+do
+    echo $elt;
+done
+return 0;

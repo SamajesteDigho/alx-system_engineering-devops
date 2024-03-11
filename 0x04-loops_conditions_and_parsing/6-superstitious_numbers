@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Numbers from ! to 20
+i=0;
+while [ $i -le 20 ];
+do
+    echo "$i";
+    if [ $i -eq 4 ];
+    then
+        echo "bad luck from China";
+    elif [ $i -eq 9 ];
+    then
+        echo "bad luck from Japan";
+    elif [ $i -eq 17 ];
+    then
+        echo "bad luck from Italy";
+    fi
+    let "i+=1";
+done
+return 0;
