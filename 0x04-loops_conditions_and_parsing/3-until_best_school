@@ -3,7 +3,6 @@
 i=10
 until [ $i -eq 0 ];
 do
-    echo "Best School";
-    let "i=i-1";
-done;
-return 0;
+    echo "Best School"
+    ((i = i - 1))
+done
