@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 # Parse apache logs
 log="apache-access.log"
-cat < "$log" | while IFS= read -r line
-do
-    IFS=" "
-    read -r -a array <<< "$line"
-    echo "${array[0]} ${array[8]}"
-done
+awk '{print $1" "$9}' "$log"
