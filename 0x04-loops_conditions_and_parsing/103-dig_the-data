@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # Number of occurrence as the log file is concerned
 log="apache-access.log"
-awk '{count[$1 " " $9]++} END {for (key in count) print count[key], key}' "$log" | sort -nr
+if [ -f "$log" ]
+then
+    awk '{count[$1 " " $9]++} END {for (key in count) print count[key], key}' "$log" | sort -nr
+fi
