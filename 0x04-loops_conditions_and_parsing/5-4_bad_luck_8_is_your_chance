@@ -14,4 +14,3 @@ do
     fi
     ((i += 1))
 done
-return 0;
