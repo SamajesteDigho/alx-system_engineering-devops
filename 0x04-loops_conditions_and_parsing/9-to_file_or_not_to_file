@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # To file not to file
 path="school"
-if test -e "$path"
+if [ -e "$path" ]
 then
     echo "school file exists"
     if [ -s "$path" ]
