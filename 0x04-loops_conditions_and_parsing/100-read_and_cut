@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Read content
+file="/etc/passwd"
+cat < "$file" | while IFS= read -r line;
+do
+    echo "$line"
+done
