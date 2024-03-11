@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Bash Script for the ls
-for elt in `ls`;
+for elt in `ls`
 do
-    echo $elt;
+    echo $elt | cut -d '-' -f 2
 done
-return 0;
