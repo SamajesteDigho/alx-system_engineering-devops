@@ -2,7 +2,7 @@
 # The clock in bash
 min=0
 hr=-1
-while [ $min -le 720 ]
+while [ $min -le 779 ]
 do
     ((dis = min % 60))
     if [ $dis -eq 0 ]
