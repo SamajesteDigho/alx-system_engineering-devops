@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Print active IPv4 address
+ip addr show | grep "inet " | awk '{print $2}'
