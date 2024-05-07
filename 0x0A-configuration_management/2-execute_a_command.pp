@@ -1,4 +1,4 @@
 # Command excutor
 exec { 'killmenow':
-    ensure  => 'stopped',
+    command  => 'pkill killmenow',
 }
