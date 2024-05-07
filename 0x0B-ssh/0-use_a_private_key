@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-# Connect to the ssh server with user ubuntu
-ssh ubuntu@100.25.151.166
