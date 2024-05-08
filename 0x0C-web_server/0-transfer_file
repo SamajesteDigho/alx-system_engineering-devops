@@ -9,4 +9,4 @@ ip=$2
 user=$3
 pkey=$4
 
-scp -i $pkey $src $user@$ip:~
+scp $src $user@$ip:~
