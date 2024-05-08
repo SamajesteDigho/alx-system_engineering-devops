@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Create an rsaa key with specific options
-ssh-keygen -t rsa -b 4096 -C "school" -f ~/.ssh/school << EOF
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school << EOF
 betty
 betty
 EOF
