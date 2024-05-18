@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# First review params
+
+collecting () {
+    if [ -z "$2" ]
+    then
+        res=$(dig "$1" | grep -A1 'ANSWER SECTION');
+        record=$(echo "$res" | awk '{print $7}')
+        ip=$(echo "$res" | awk '{print $8}')
+        echo "The subdomain $2 is a $record record and points to $ip";
+    else
+        res=$(dig "$2.$1" | grep -A1 'ANSWER SECTION');
+        record=$(echo "$res" | awk '{print $7}')
+        ip=$(echo "$res" | awk '{print $8}')
+        echo "The subdomain $2 is a $record record and points to $ip";
+    fi
+    return 0;
+} 
+
+if [ $# -lt 1 ]
+then
+    echo "No parameter passed";
+else
+    if [ -z "$1" ]
+    then
+        echo "domain name must not be empty";
+    else
+        if [ -z "$2" ]
+        then
+            collecting "$1";
+        else
+            collecting "$1" "$2";
+        fi
+    fi
+fi
