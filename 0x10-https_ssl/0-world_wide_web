@@ -4,14 +4,18 @@
 collecting () {
     if [ -z "$2" ]
     then
-        res=$(dig "$1" | grep -A1 'ANSWER SECTION');
-        record=$(echo "$res" | awk '{print $7}')
-        ip=$(echo "$res" | awk '{print $8}')
-        echo "The subdomain $2 is a $record record and points to $ip";
+        subd=("www" "lb-01" "web-01" "web-02")
+        for item in "${subd[@]}"
+        do
+            res=$(dig "$item.$1" | grep -A1 'ANSWER SECTION');
+            record=$(echo $res | awk '{print $7}');
+            ip=$(echo $res | awk '{print $8}');
+            echo "The subdomain $item is a $record record and points to $ip";
+        done
     else
         res=$(dig "$2.$1" | grep -A1 'ANSWER SECTION');
-        record=$(echo "$res" | awk '{print $7}')
-        ip=$(echo "$res" | awk '{print $8}')
+        record=$(echo $res | awk -n '{print $7}');
+        ip=$(echo $res | awk -n '{print $8}');
         echo "The subdomain $2 is a $record record and points to $ip";
     fi
     return 0;
