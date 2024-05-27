@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays the current user
+if [ $# -eq 1 ]
+then
+    echo "$1";
+else
+    whoami;
+fi
