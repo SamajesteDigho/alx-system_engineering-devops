@@ -1,0 +1,6 @@
+ssh ubuntu@100.25.151.166
+sudo apt install ufw
+sudo ufw allow "Nginx HTTP"
+sudo ufw allow "Nginx HTTPS"
+sudo ufw allow OpenSSH
+sudo ufw enable
