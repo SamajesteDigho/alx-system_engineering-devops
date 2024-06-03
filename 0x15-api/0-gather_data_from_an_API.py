@@ -2,8 +2,8 @@
 """
     Here the code description and module
 """
-import sys
 import requests
+import sys
 
 
 args = sys.argv
