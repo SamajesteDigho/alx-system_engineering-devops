@@ -26,6 +26,6 @@ if __name__ == "__main__":
             print("Employee {} is done with tasks({}/{}):".
                   format(user['name'], len(completed), len(todos)))
             for x in completed:
-                print("\t{}".format(x['title']))
+                print("\t {}".format(x['title']))
         except Exception as e:
             pass
