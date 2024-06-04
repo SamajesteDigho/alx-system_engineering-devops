@@ -31,16 +31,6 @@ if __name__ == "__main__":
             response2 = requests.get(url=tdu)
             todos = response2.json()
 
-            completed = []
-            for x in todos:
-                if x['completed'] is True:
-                    completed.append(x)
-
-            print("Employee {} is done with tasks({}/{}):".
-                  format(user['name'], len(completed), len(todos)))
-            for x in completed:
-                print("\t {}".format(x['title']))
-
             data["{}".format(user['id'])] = parse_format_data(user, todos)
 
         with open('todo_all_employees.json', 'w') as file:
