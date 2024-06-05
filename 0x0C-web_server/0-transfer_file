@@ -4,10 +4,10 @@
 if [ $# -lt 4 ]; then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 else
-    src=$1
-    ip=$2
-    user=$3
-    pkey=$4
-    scp -i "$pkey" "$src" "$user@$ip":~
+    src="$1"
+    ip="$2"
+    user="$3"
+    pkey="$4"
+    scp -i $pkey $src $user@$ip:~
 fi
 
