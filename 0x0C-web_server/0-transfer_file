@@ -10,4 +10,3 @@ else
     pkey="$4"
     scp -i $pkey $src $user@$ip:~
 fi
-
