@@ -1,5 +1,6 @@
 # create a package installation manifest
 package { 'werkzeug':
+    ensure => 'installed',
     provider => 'pip3',
 }
 
