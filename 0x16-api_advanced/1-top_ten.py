@@ -12,7 +12,7 @@ def top_ten(subreddit):
         "Authorization": "bearer {}".format(bearer),
         "User-Agent": "ALX_SE_Project/0.1 by SamajesteDigho"
     }
-    url = "https://oauth.reddit.com/r/{}/gold?limit=10".format(subreddit)
+    url = "https://oauth.reddit.com/r/{}/new?limit=10".format(subreddit)
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         data = response.json()
