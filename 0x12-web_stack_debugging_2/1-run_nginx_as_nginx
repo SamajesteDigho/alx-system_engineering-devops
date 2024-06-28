@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Define nginx not running as root
+sudo adduser nginx
+# sudo nano /etc/nginx/nginx.conf to be modified at user point;

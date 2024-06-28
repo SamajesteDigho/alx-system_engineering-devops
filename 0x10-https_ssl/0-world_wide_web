@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # First review params
 # shellcheck disable=SC2086
+
 collecting () {
     if [ -z "$2" ]
     then
