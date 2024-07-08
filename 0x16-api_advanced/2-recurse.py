@@ -16,7 +16,7 @@ def recurse_merge(subreddit, hot_list=[], count=0, after=None):
     else:
         url = "https://www.reddit.com/r/{}/hot?limit=99&count={}&after{}".format(
             subreddit, count, after)
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code == 200:
         data = response.json()
         try:
