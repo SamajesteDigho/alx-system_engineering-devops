@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 # Here is the exo 100
+""" 
+    Here the function for the count operation 
+"""
+
 import requests
-""" Here the function for the count operation """
 
 def count_words(subreddit, word_list, after=None, counts={}):
     """
