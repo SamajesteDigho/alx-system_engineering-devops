@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # Here is the exo 100
-""" 
-    Here the function for the count operation 
 """
-
+    Here the function for the count operation
+"""
 import requests
+
 
 def count_words(subreddit, word_list, after=None, counts={}):
     """
@@ -20,15 +20,15 @@ def count_words(subreddit, word_list, after=None, counts={}):
 
     if after:
         params['after'] = after
-    
+
     response = requests.get(url=url,
                             headers=headers,
                             params=params,
                             allow_redirects=False)
-    
+
     if response.status_code != 200:
         return None
-    
+
     main_data = response.json()
     data = main_data.get('data')
     children = data.get('children')
@@ -38,7 +38,7 @@ def count_words(subreddit, word_list, after=None, counts={}):
         for word in word_list:
             if word.lower() in title:
                 counts[word] = counts.get(word, 0) + title.count(word.lower())
-        
+
     after = main_data.get('data', {}).get('after')
 
     if after:
