@@ -7,12 +7,9 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=None):
     """ Get the number of subscribers in a subreddit """
-    headers = {
-        # "Authorization": "bearer {}".format(bearer),
-        "user-agent": "request"
-    }
-    params = {"limit" : 100}
-    
+    headers = {"user-agent": "request"}
+    params = {"limit": 100}
+
     url = "https://www.reddit.com/r/{}/hot".format(subreddit)
     if after:
         params['after'] = after
