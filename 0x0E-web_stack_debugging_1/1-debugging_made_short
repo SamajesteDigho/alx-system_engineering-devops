@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 # Nginx make it short
 
 sudo apt-get -y update
